@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GenAI ATS Resume Analyzer</title>
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Link External CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>📄 GenAI ATS Resume Analyzer</h1>
+        <p>AI-powered resume screening using Google Gemini GenAI</p>
+    </div>
+
+    <form action="/analyze" method="POST" enctype="multipart/form-data">
+
+        <div class="section">
+            <div class="section-title">Resume Upload</div>
+            <label>📎 Upload Resume (PDF)</label>
+            <input type="file" name="resume" accept=".pdf" required>
+            <div class="hint">Only PDF files are supported</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Job Description</div>
+            <label>📝 Paste Job Description</label>
+            <textarea name="job_description"
+                      placeholder="Enter required skills, responsibilities, and qualifications..."
+                      required></textarea>
+        </div>
+
+        <button type="submit">🚀 Analyze Resume</button>
+    </form>
+
+</div>
+
+</body>
+</html>
