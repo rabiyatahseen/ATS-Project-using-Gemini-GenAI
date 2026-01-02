@@ -1,54 +1,60 @@
 # ATS-Project-using-Gemini-GenAI
 Application tracking system
-📄 GenAI-Based Applicant Tracking System (ATS)
-📌 Overview
+Perfect 👍
+Below is a **clean, professional README.md** that matches **exactly** the `app.py` you shared and is suitable for **college submission / GitHub**.
 
-An Applicant Tracking System (ATS) is used by organizations to automatically analyze resumes and match them with job descriptions.
-This project implements a mini ATS platform using Flask, PDF parsing, and Google Gemini GenAI to simulate real-world resume screening used in recruitment systems.
+You can **copy–paste this fully** into a file named **`README.md`** inside your ATS project folder.
 
-The system accepts a resume in PDF format and a job description, analyzes both, and generates an AI-based evaluation including match percentage and feedback.
+---
 
-🎯 Problem Statement
+# 📄 GenAI-Based Applicant Tracking System (ATS)
+
+## 📌 Overview
+
+An **Applicant Tracking System (ATS)** is used by organizations to automatically analyze resumes and match them with job descriptions.
+This project implements a **mini ATS platform** using **Flask, PDF parsing, and Google Gemini GenAI** to simulate real-world resume screening used in recruitment systems.
+
+The system accepts a **resume in PDF format** and a **job description**, analyzes both, and generates an **AI-based evaluation** including match percentage and feedback.
+
+---
+
+## 🎯 Problem Statement
 
 Manual resume screening is:
 
-Time-consuming
+* Time-consuming
+* Error-prone
+* Not scalable
 
-Error-prone
+This project aims to **automate resume evaluation** using a GenAI-powered backend workflow.
 
-Not scalable
+---
 
-This project aims to automate resume evaluation using a GenAI-powered backend workflow.
+## ⚙️ System Flow
 
-⚙️ System Flow
+1. User uploads a **resume PDF**
+2. Backend extracts text from the PDF
+3. Resume content is parsed using Gemini GenAI
+4. Job description is parsed using Gemini GenAI
+5. ATS logic compares resume and job description
+6. AI-generated analysis is returned as JSON
 
-User uploads a resume PDF
+---
 
-Backend extracts text from the PDF
+## 🛠 Technology Stack
 
-Resume content is parsed using Gemini GenAI
+* **Python**
+* **Flask**
+* **HTML / CSS** (Frontend)
+* **PyPDF2** (PDF text extraction)
+* **Google Gemini GenAI**
+* **JSON**
 
-Job description is parsed using Gemini GenAI
+---
 
-ATS logic compares resume and job description
+## 📂 Project Structure
 
-AI-generated analysis is returned as JSON
-
-🛠 Technology Stack
-
-Python
-
-Flask
-
-HTML / CSS (Frontend)
-
-PyPDF2 (PDF text extraction)
-
-Google Gemini GenAI
-
-JSON
-
-📂 Project Structure
+```
 ATS_Project/
 │
 ├── app.py              # Flask backend
@@ -57,108 +63,135 @@ ATS_Project/
 ├── uploads/            # Temporary PDF storage
 ├── requirements.txt    # Python dependencies
 └── README.md           # Project documentation
+```
 
-📥 API Design
-Endpoint
+---
+
+## 📥 API Design
+
+### Endpoint
+
+```
 POST /analyze
+```
 
-Input
+### Input
 
-Resume PDF (multipart/form-data)
+* Resume PDF (`multipart/form-data`)
+* Job description (text)
 
-Job description (text)
+### Output (JSON)
 
-Output (JSON)
+* Parsed resume data
+* Parsed job description
+* ATS evaluation result
 
-Parsed resume data
+---
 
-Parsed job description
+## 🧠 ATS Evaluation Includes
 
-ATS evaluation result
+* Match Percentage (0–100)
+* Matching skills
+* Missing skills
+* Strengths
+* Improvement suggestions
 
-🧠 ATS Evaluation Includes
+---
 
-Match Percentage (0–100)
+## 📌 Sample Input
 
-Matching skills
+* **Resume**: `resume.pdf`
+* **Job Description**:
+  Backend Developer with experience in Python, APIs, and database systems.
 
-Missing skills
+---
 
-Strengths
+## 📊 Sample Output
 
-Improvement suggestions
-
-📌 Sample Input
-
-Resume: resume.pdf
-
-Job Description:
-Backend Developer with experience in Python, APIs, and database systems.
-
-📊 Sample Output
+```json
 {
   "parsed_resume": "...",
   "parsed_job_description": "...",
   "ats_result": "Match Percentage: 80% ..."
 }
+```
 
-🚀 How to Run the Project
-1️⃣ Install Required Packages
+---
+
+## 🚀 How to Run the Project
+
+### 1️⃣ Install Required Packages
+
+```bash
 pip install flask PyPDF2 werkzeug google-genai
+```
 
-2️⃣ Set Gemini API Key (Environment Variable)
+### 2️⃣ Set Gemini API Key (Environment Variable)
+
+```bash
 setx GOOGLE_API_KEY "YOUR_API_KEY"
-
+```
 
 Restart VS Code after setting the key.
 
-3️⃣ Run the Flask App
-python app.py
+---
 
+### 3️⃣ Run the Flask App
+
+```bash
+python app.py
+```
 
 The server will start at:
 
+```
 http://127.0.0.1:5000
+```
 
-4️⃣ Access the Application
+---
 
-Open browser
+### 4️⃣ Access the Application
 
-Upload resume PDF
+* Open browser
+* Upload resume PDF
+* Paste job description
+* Click **Analyze Resume**
 
-Paste job description
+---
 
-Click Analyze Resume
-
-🎓 Learning Outcomes
+## 🎓 Learning Outcomes
 
 By completing this project, students learn to:
 
-Build a Flask-based backend application
+* Build a Flask-based backend application
+* Handle file uploads securely
+* Extract text from PDFs
+* Design GenAI prompts
+* Implement an ATS-style evaluation system
+* Understand real-world GenAI use cases in HR tech
 
-Handle file uploads securely
+---
 
-Extract text from PDFs
+## 🌱 Future Enhancements
 
-Design GenAI prompts
+* Strict JSON output formatting
+* Resume and JD embeddings for semantic matching
+* Frontend result visualization
+* Database integration
+* RAG-based ATS system
 
-Implement an ATS-style evaluation system
+---
 
-Understand real-world GenAI use cases in HR tech
+## 📌 Conclusion
 
-🌱 Future Enhancements
-
-Strict JSON output formatting
-
-Resume and JD embeddings for semantic matching
-
-Frontend result visualization
-
-Database integration
-
-RAG-based ATS system
-
-📌 Conclusion
-
-This project demonstrates how PDF parsing, backend APIs, and Generative AI can be combined to build a real-world ATS system.
+This project demonstrates how **PDF parsing, backend APIs, and Generative AI** can be combined to build a **real-world ATS system**.
 It provides practical exposure to how AI is applied in recruitment and enterprise systems.
+
+
+
+* Improve README for **GitHub**
+* Add **screenshots section**
+* Write a **project explanation for viva**
+* Design **ATS result UI page**
+
+Just tell me 🌸
