@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATS Resume Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="card score-card">
+            <div class="circle">
+                78%
+            </div>
+            <div>
+                <h2>ATS Score</h2>
+                <p>Your resume is strong, but needs tweaks.</p>
+            </div>
+        </div>
+
+        <div class="card recommend">
+            <h2>Job Match Recommendation</h2>
+            <strong>Senior Frontend Developer</strong>
+            <p>Based on keyword & skill analysis</p>
+        </div>
+    </div>
+
+    <!-- MAIN SECTION -->
+    <div class="section">
+        <div class="card pros">
+            <h2>✔ Strengths (Pros)</h2>
+            <pre>{{ parsed_resume }}</pre>
+        </div>
+
+        <div class="card cons">
+            <h2>⚠ Improvements (Cons)</h2>
+            <pre>{{ ats_result }}</pre>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
